@@ -1,0 +1,92 @@
+/* Admin Login Container */
+.admin-login-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 70px auto;
+  padding: 35px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Admin Form */
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-login-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2a2a2a;
+}
+
+/* Labels */
+.admin-login-form label {
+  margin-top: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+.admin-login-form input[type="email"],
+.admin-login-form input[type="password"],
+.admin-login-form input[type="text"] {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  transition: border 0.3s ease;
+}
+
+.admin-login-form input:focus {
+  border-color: #dc3545; /* Admin red theme */
+  outline: none;
+}
+
+/* Submit Button */
+.admin-login-form .admin-login-btn {
+  margin-top: 22px;
+  padding: 12px;
+  background-color: #dc3545;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-login-form .admin-login-btn:hover {
+  background-color: #a61c2b;
+}
+
+/* Error Messages */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Password Strength */
+.weak {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.strong {
+  color: green;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 500px) {
+  .admin-login-container {
+    margin: 40px 15px;
+    padding: 20px;
+  }
+}
