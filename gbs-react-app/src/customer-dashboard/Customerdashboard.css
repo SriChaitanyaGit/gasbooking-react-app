@@ -1,0 +1,367 @@
+/* Customerdashboard.css - Animated Professional Theme */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --primary: #5d3a00;        /* Dark brown */
+  --primary-light: #7a5c3f;  /* Medium brown */
+  --secondary: #fff8f0;      /* Cream white */
+  --accent: #f3e5d8;         /* Light beige */
+  --highlight: #a86b2e;      /* Orange-brown */
+  --text: #2e1c00;          /* Dark text */
+  --muted-text: #7a5c3f;     /* Medium brown text */
+  
+  /* Status Colors */
+  --success: #4c8b4c;       /* Green */
+  --warning: #e6a336;       /* Gold */
+  --danger: #c44d4d;        /* Red */
+  --info: #5d9cec;          /* Blue */
+  
+  /* UI Elements */
+  --border-radius: 12px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Base Styles */
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: var(--secondary);
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.customer-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar with Animation */
+.dashboard-navbar {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Welcome Section with Animation */
+.welcome-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transform: scale(0.95);
+  transition: var(--transition);
+  animation: fadeInScale 0.6s ease-out forwards;
+}
+
+.welcome-section:hover {
+  transform: scale(1);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(0.95);
+  }
+}
+
+/* Horizontal Scroll Container with Animated Cards */
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-light) var(--accent);
+}
+
+.card-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-container::-webkit-scrollbar-track {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: var(--primary-light);
+  border-radius: 10px;
+}
+
+/* Agency Card with Pop Animation */
+.agency-card {
+  min-width: 280px;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  transform: translateY(0);
+  animation: cardEnter 0.6s ease-out;
+}
+
+.agency-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Booking Card with Pop Animation */
+.booking-card {
+  min-width: 320px;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  transform: translateY(0);
+  animation: cardEnter 0.6s ease-out;
+}
+
+.booking-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+/* Status Badges with Pulse Animation */
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Button Hover Animations */
+.btn {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.btn:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+/* Feedback Form Animation */
+.feedback-section {
+  background-color: var(--accent);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin: 2rem auto;
+  max-width: 1200px;
+  transform: perspective(1000px) rotateX(0deg);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feedback-section:hover {
+  transform: perspective(1000px) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Animation */
+.dashboard-footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 2rem 0;
+  margin-top: auto;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.6s ease-out 0.3s forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .welcome-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  .card-container {
+    padding: 1rem;
+  }
+  
+  .agency-card, .booking-card {
+    min-width: 260px;
+  }
+}
+
+/* Loading Animation */
+.loading-spinner {
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Floating Animation for Cards */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.agency-card, .booking-card {
+  animation: float 6s ease-in-out infinite;
+}
+
+.agency-card:hover, .booking-card:hover {
+  animation: none;
+}
+
+/* Glowing Red Text with Fire Effect */
+.glowing-red {
+  color: hsl(0, 2%, 70%);
+  text-shadow: 
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 40px #ff0000;
+  animation: glow-pulse 2s infinite alternate;
+}
+
+.fire-icon {
+  color: #ff4500;
+  filter: drop-shadow(0 0 5px #ff4500);
+  animation: fire-flicker 0.5s infinite alternate;
+}
+
+@keyframes glow-pulse {
+  from {
+    text-shadow: 
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 20px #ff0000;
+  }
+  to {
+    text-shadow: 
+      0 0 10px #ff0000,
+      0 0 20px #ff0000,
+      0 0 30px #ff0000,
+      0 0 40px #ff5722;
+  }
+}
+
+@keyframes fire-flicker {
+  0%, 100% {
+    color: #ff4500;
+    filter: drop-shadow(0 0 5px #ff4500);
+  }
+  25% {
+    color: #ff8c00;
+    filter: drop-shadow(0 0 7px #ff8c00);
+  }
+  50% {
+    color: #ffcc00;
+    filter: drop-shadow(0 0 5px #ffcc00);
+  }
+  75% {
+    color: #ff4500;
+    filter: drop-shadow(0 0 7px #ff4500);
+  }
+}
