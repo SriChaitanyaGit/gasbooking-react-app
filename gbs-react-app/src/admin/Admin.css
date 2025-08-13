@@ -1,0 +1,149 @@
+/* ===== Antique & Aesthetic Admin Page Styling ===== */
+
+/* General body & background */
+body {
+  background: #f9f5ef; /* warm parchment background */
+  color: #4b3f34; /* deep brown text */
+  font-family: "IBM Plex Sans", Sans-serif;
+}
+
+/* Navbar - vintage leather look */
+.navbar {
+  background: linear-gradient(90deg, #5c4033, #4b3f34) !important;
+  border-bottom: 3px solid #d4af37; /* antique gold line */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #f4e1c1 !important;
+  font-family: "Garamond", serif;
+  letter-spacing: 1px;
+}
+
+.navbar .btn {
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn-outline-light {
+  border: 2px solid #f4e1c1;
+  color: #f4e1c1;
+}
+
+.navbar .btn-outline-light:hover {
+  background-color: #f4e1c1;
+  color: #4b3f34;
+}
+
+.navbar .btn-success {
+  background-color: #a67c52;
+  border: none;
+}
+
+.navbar .btn-danger {
+  background-color: #8b3a3a;
+  border: none;
+}
+
+/* Cards */
+.card {
+  background-color: #fffaf0;
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(75, 63, 52, 0.15);
+}
+
+.card h4, 
+.card h5 {
+  font-family: "Garamond", serif;
+  color: #4b3f34;
+}
+
+/* Tables */
+.table {
+  background-color: #fff8e7;
+  border: 1px solid #d4af37;
+  color: #4b3f34;
+}
+
+.table thead th {
+  background-color: #d4af37;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #b38e2e;
+}
+
+.table tbody tr:hover {
+  background-color: #f4e1c1 !important;
+}
+
+.table-bordered th, 
+.table-bordered td {
+  border: 1px solid #d4af37 !important;
+}
+
+/* Inputs & buttons inside tables and forms */
+input, select, textarea {
+  background-color: #fffaf0 !important;
+  border: 1px solid #c9a66b !important;
+  color: #4b3f34 !important;
+}
+
+input:focus, 
+select:focus {
+  border-color: #a67c52 !important;
+  box-shadow: 0 0 5px rgba(166, 124, 82, 0.5) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #a67c52;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #8b6b3a;
+}
+
+.btn-warning {
+  background-color: #d4af37;
+  border: none;
+  color: #4b3f34;
+}
+
+.btn-warning:hover {
+  background-color: #b38e2e;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #6b2323;
+}
+
+/* Alerts */
+.alert-info {
+  background-color: #f4e1c1;
+  border: 1px solid #d4af37;
+  color: #4b3f34;
+}
+
+.alert-success {
+  background-color: #e3d7b0;
+  border: 1px solid #b38e2e;
+  color: #4b3f34;
+}
+
+/* Scrollable table look */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f4e1c1;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #a67c52;
+  border-radius: 4px;
+}
