@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --font-family: 'IBM Plex Sans', sans-serif;
+  --primary-color: #5d3a00;
+  --secondary-color: #fff8f0;
+  --accent-color: #f3e5d8;
+  --text-color: #2e1c00;
+  --muted-text: #7a5c3f;
+  --highlight-color: #a86b2e;
+  --border-radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* Container */
+.cp-container {
+  max-width: 500px;
+  margin: 3rem auto;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* Title */
+.cp-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Form */
+.cp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Input Fields */
+.cp-input {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--muted-text);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.cp-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(93, 58, 0, 0.2);
+}
+
+/* Buttons */
+.cp-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  border: none;
+}
+
+.cp-btn--primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.cp-btn--primary:hover {
+  background-color: var(--highlight-color);
+}
+
+.cp-btn--outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.cp-btn--outline:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Messages */
+.cp-message {
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  text-align: center;
+}
+
+.cp-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.cp-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Divider */
+.cp-divider {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .cp-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .cp-title {
+    font-size: 1.5rem;
+  }
+
+  .cp-btn {
+    font-size: 0.95rem;
+  }
+}
