@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --font-family: 'IBM Plex Sans', sans-serif;
+  --primary-color: #5d3a00;
+  --secondary-color: #fff8f0;
+  --accent-color: #f3e5d8;
+  --text-color: #2e1c00;
+  --highlight-color: #a86b2e;
+  --border-radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* Page */
+.pm-page {
+  padding: 2rem;
+}
+
+/* Header */
+.pm-header {
+  margin-bottom: 1rem;
+}
+
+.pm-back-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pm-back-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Container */
+.pm-container {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Title & Subtitle */
+.pm-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.pm-subtitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+/* Summary */
+.pm-summary {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* QR Section */
+.pm-qr-section {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.pm-qr-code {
+  width: 200px;
+  height: 200px;
+  margin: 1rem 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* Confirm Button */
+.pm-confirm {
+  text-align: center;
+}
+
+.pm-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.pm-btn--primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.pm-btn--primary:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .pm-container {
+    padding: 1.5rem;
+  }
+
+  .pm-title {
+    font-size: 1.5rem;
+  }
+
+  .pm-btn {
+    font-size: 0.95rem;
+  }
+}
